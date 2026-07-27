@@ -1,0 +1,103 @@
+/* ==========================================
+   HEADER / NAVBAR
+   ========================================== */
+
+.header-container {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  /* Fundo idêntico à imagem: azul bem escuro na esquerda, preto na direita */
+  background: linear-gradient(90deg, #040b17 0%, #000000 40%, #000000 100%);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   LOGO
+   ========================================== */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Quadrado com gradiente */
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00F0FF 0%, #A855F7 100%);
+}
+
+/* O símbolo >_ dentro do quadrado */
+.terminal-symbol {
+  color: #060608;
+  font-family: 'JetBrains Mono', monospace, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo-text {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ==========================================
+   NAV LINKS (MENU DO MEIO)
+   ========================================== */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #cbd5e1; /* Cinza claro suave */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   BOTÃO ENTRAR EM CONTATO
+   ========================================== */
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  border-radius: 10px; 
+  
+  /* Gradiente horizontal Ciano -> Azul idêntico ao print */
+  background: linear-gradient(90deg, #00F0FF 0%, #3B82F6 100%);
+  
+  color: #000000; /* Texto preto para o máximo contraste */
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-contact:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); 
+}

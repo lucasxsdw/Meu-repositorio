@@ -1,0 +1,258 @@
+/* ==========================================
+   CONTAINER PRINCIPAL
+   ========================================== */
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1.2fr 1fr; /* Divide a tela 60% texto / 40% imagem */
+    padding: 6rem 2rem;
+  }
+}
+
+/* ==========================================
+   TEXTOS E TIPOGRAFIA
+   ========================================== */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #00F0FF;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.availability-badge .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #00F0FF;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00F0FF; /* Efeito aceso na bolinha */
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title { font-size: 3.5rem; }
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #00F0FF, #A855F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: #e2e8f0;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle { font-size: 1.25rem; }
+}
+
+.hero-description {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+
+/* ==========================================
+   BOTÕES PRINCIPAIS
+   ========================================== */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botão Azul/Ciano (Ver Projetos) */
+.btn-primary {
+  background: linear-gradient(to right, #00F0FF, #3B82F6);
+  color: #0A0A0C;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Botão Escuro (Baixar CV) */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  backdrop-filter: blur(16px);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   REDES SOCIAIS
+   ========================================== */
+.hero-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  color: #00F0FF;
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   IMAGEM DE PERFIL E EFEITOS NEON
+   ========================================== */
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* Efeito de brilho borrado atrás da imagem */
+.image-glow {
+  position: absolute;
+  inset: -10px; /* Expande o brilho para fora da foto */
+  background: linear-gradient(135deg, #00F0FF, #A855F7);
+  filter: blur(25px);
+  opacity: 0.5;
+  border-radius: 24px;
+  z-index: 0;
+}
+
+/* Imagem Principal */
+.profile-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Mantém a imagem perfeitamente quadrada */
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px; /* Bordas arredondadas idênticas ao print */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================
+   BADGES (ETIQUETAS DA FOTO)
+   ========================================== */
+.img-badge {
+  position: absolute;
+  z-index: 2;
+  padding: 0.4rem 0.8rem;
+  background: rgba(10, 10, 12, 0.7); /* Fundo escuro transparente */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+}
+
+/* Etiqueta v1.0.0 (Topo Direita - Roxa) */
+.badge-tr {
+  top: 1.5rem;
+  right: -1rem;
+  color: #A855F7;
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+/* Etiqueta <dev /> (Base Esquerda - Ciano) */
+.badge-bl {
+  bottom: 1.5rem;
+  left: -1rem;
+  color: #00F0FF;
+  border-color: rgba(0, 240, 255, 0.3);
+}
+
+/* ==========================================
+   REDES SOCIAIS (Ajuste para Imagens)
+   ========================================== */
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+
+.gitHub-icon,
+.linkedin-icon,
+.zap-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain; /* Garante que a imagem não distorça */
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+.social-btn:hover img {
+  transform: scale(1.1);
+}
