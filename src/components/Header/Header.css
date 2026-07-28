@@ -3,10 +3,12 @@
    ========================================== */
 
 .header-container {
+  position: fixed;
   width: 100%;
   padding: 1.25rem 2rem;
-  /* Fundo idêntico à imagem: azul bem escuro na esquerda, preto na direita */
   background: linear-gradient(90deg, #040b17 0%, #000000 40%, #000000 100%);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 .header-content {

@@ -10,6 +10,7 @@
   margin: 0 auto;
   padding: 4rem 1.5rem;
   align-items: center;
+  padding-top: 8rem;
 }
 
 @media (min-width: 1024px) {
