@@ -1,0 +1,230 @@
+/* ==========================================
+   SEÇÃO B2B SERVICES
+   ========================================== */
+.b2b-section {
+  width: 100%;
+  padding: 8rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  
+  /* Fundo sutil de grid (malha) que quebra as estrelas */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-color: transparent; 
+}
+
+/* ==========================================
+   CABEÇALHO
+   ========================================== */
+.b2b-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.b2b-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #00F0FF;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.b2b-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.b2b-gradient {
+  background: linear-gradient(to right, #00F0FF, #A855F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.b2b-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   CONTAINER DE VIDRO
+   ========================================== */
+.b2b-glass-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(20, 20, 25, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2.5rem;
+}
+
+.b2b-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ==========================================
+   CARDS INDIVIDUAIS
+   ========================================== */
+.b2b-card {
+  background-color: rgba(10, 10, 12, 0.9);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.b2b-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Bordas dinâmicas baseadas nos temas */
+.theme-cyan { border-color: rgba(0, 240, 255, 0.3); box-shadow: 0 0 30px rgba(0, 240, 255, 0.05); }
+.theme-cyan:hover { box-shadow: 0 0 40px rgba(0, 240, 255, 0.15); border-color: rgba(0, 240, 255, 0.6); }
+.theme-cyan .b2b-icon-wrapper svg { color: #00F0FF; }
+.theme-cyan .b2b-link { color: #00F0FF; }
+.theme-cyan .check-icon { color: #00F0FF; }
+.theme-cyan .b2b-stat h4 { color: #00F0FF; }
+
+.theme-purple { border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 0 30px rgba(168, 85, 247, 0.05); }
+.theme-purple:hover { box-shadow: 0 0 40px rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.6); }
+.theme-purple .b2b-icon-wrapper svg { color: #A855F7; }
+.theme-purple .b2b-link { color: #A855F7; }
+.theme-purple .check-icon { color: #A855F7; }
+.theme-purple .b2b-stat h4 { color: #A855F7; }
+
+.theme-blue { border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 0 30px rgba(59, 130, 246, 0.05); }
+.theme-blue:hover { box-shadow: 0 0 40px rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.6); }
+.theme-blue .b2b-icon-wrapper svg { color: #3b82f6; }
+.theme-blue .b2b-link { color: #3b82f6; }
+.theme-blue .check-icon { color: #3b82f6; }
+.theme-blue .b2b-stat h4 { color: #3b82f6; }
+
+/* ==========================================
+   INTERIOR DO CARD
+   ========================================== */
+.b2b-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.b2b-icon-wrapper svg {
+  width: 22px;
+  height: 22px;
+}
+
+.b2b-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.b2b-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1; /* Empurra o resto pro final do card */
+}
+
+.b2b-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.b2b-features li {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.check-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* ==========================================
+   RODAPÉ DO CARD (Métricas)
+   ========================================== */
+.b2b-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  margin-top: auto;
+}
+
+.b2b-stat h4 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 0.2rem 0;
+}
+
+.b2b-stat span {
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.b2b-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.b2b-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+@media (max-width: 1024px) {
+  .b2b-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .b2b-title { font-size: 2.5rem; }
+  .b2b-glass-container { padding: 1.5rem; }
+  .b2b-grid { grid-template-columns: 1fr; }
+}

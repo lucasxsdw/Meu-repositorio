@@ -1,0 +1,193 @@
+/* ==========================================
+   SEÇÃO FORMAÇÃO & VIDA ACADÊMICA
+   ========================================== */
+.formacao-section {
+  width: 100%;
+  padding: 6rem 1.5rem;
+  background-color: transparent; /* Mantém as estrelas visíveis! */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.formacao-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.formacao-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.formacao-subtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   CONTAINER DA LINHA DO TEMPO
+   ========================================== */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* A Linha Central */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 240, 255, 0.3) 10%, rgba(168, 85, 247, 0.3) 90%, transparent);
+  transform: translateX(-50%); /* Centraliza a linha perfeitamente */
+}
+
+/* ==========================================
+   ITENS E CARDS
+   ========================================== */
+.timeline-item {
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: center; /* Alinha o card com a bolinha no centro */
+}
+
+/* Se for par, empurra o conteúdo pro começo (esquerda) */
+.timeline-item-left {
+  justify-content: flex-start;
+}
+
+/* Se for ímpar, empurra o conteúdo pro final (direita) */
+.timeline-item-right {
+  justify-content: flex-end;
+}
+
+/* O Card em si */
+.timeline-card {
+  width: 45%; /* Ocupa menos da metade para não encostar na linha */
+  background: #121214;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 240, 255, 0.3);
+}
+
+/* ==========================================
+   O PONTO DE LUZ (Bolinha na linha)
+   ========================================== */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #050505;
+  border: 2px solid #00F0FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+  z-index: 2;
+}
+
+.timeline-item-right .timeline-dot {
+  border-color: #A855F7; /* Roxinho para os itens da direita */
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.dot-inner {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+/* ==========================================
+   TEXTOS DENTRO DO CARD
+   ========================================== */
+.card-periodo {
+  color: #00F0FF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.timeline-item-right .card-periodo {
+  color: #A855F7; /* Combina com a bolinha roxa */
+}
+
+.card-titulo {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.card-instituicao {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card-descricao {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.card-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (Celulares e Tablets)
+   ========================================== */
+@media (max-width: 768px) {
+  /* Move a linha toda para a esquerda */
+  .timeline-line {
+    left: 0;
+    transform: none;
+  }
+  
+  /* Bolinhas grudam na linha à esquerda */
+  .timeline-dot {
+    left: 0;
+    transform: translateX(-50%); /* Mantém metade na linha, metade fora */
+  }
+
+  /* Faz TODOS os cards (pares e ímpares) ocuparem a tela toda na direita */
+  .timeline-item-left,
+  .timeline-item-right {
+    justify-content: flex-end;
+  }
+
+  /* Cards ocupam quase toda a largura, deixando espaço só pra linha */
+  .timeline-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}

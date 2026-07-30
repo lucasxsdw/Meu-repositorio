@@ -1,0 +1,139 @@
+/* ==========================================
+   SEÇÃO HABILIDADES (TECH STACK)
+   ========================================== */
+.habilidades-section {
+  width: 100%;
+  padding: 6rem 1.5rem;
+  background-color: transparent; /* Mantém as estrelas no fundo */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.habilidades-header {
+  margin-bottom: 4rem;
+}
+
+.tech-eyebrow {
+  color: #00F0FF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.habilidades-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.habilidades-subtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   GRADE (CSS GRID)
+   ========================================== */
+/* ==========================================
+   GRADE (CSS GRID)
+   ========================================== */
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem; 
+  max-width: 1100px; 
+  margin: 0 auto;
+}
+/* ==========================================
+   CARD DE HABILIDADE & EFEITOS (HOVER)
+   ========================================== */
+.skill-card {
+  background-color: #121214; /* Fundo do card */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease; /* Animação suave para tudo */
+  cursor: default;
+}
+
+/* O EFEITO AO PASSAR O MOUSE */
+.skill-card:hover {
+  transform: translateY(-8px); /* Sobe o card */
+  border-color: #00F0FF; /* Borda acende em ciano */
+  box-shadow: 0 10px 25px rgba(0, 240, 255, 0.15); /* Brilho atrás do card */
+  background-color: #1a1a1e; /* Fica levemente mais claro */
+}
+
+/* ==========================================
+   INTERIOR DO CARD (ÍCONE E TEXTOS)
+   ========================================== */
+.skill-icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: #1c1c1f;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+/* Efeito no ícone quando passa o mouse no card inteiro */
+.skill-card:hover .skill-icon-box {
+  background-color: rgba(0, 240, 255, 0.1);
+  transform: scale(1.1); /* Ícone dá uma leve "pulsada" */
+}
+
+.skill-icon-box img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain; /* Evita que a imagem distorça */
+}
+
+/* Texto provisório enquanto não tem imagem */
+.placeholder-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00F0FF;
+}
+
+.skill-nome {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+.skill-categoria {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+@media (max-width: 992px) {
+  .habilidades-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 por linha em tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .habilidades-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha em celulares */
+  }
+}
