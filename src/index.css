@@ -1,26 +1,44 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+:root {
+  /* Cores Principais */
+  --bg-dark: #050505; 
+  --bg-card: rgba(20, 20, 25, 0.6);
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
   
+  /* Gradientes e Destaques */
+  --cyan: #00F0FF;
+  --purple: #A855F7;
+  --gradient-primary: linear-gradient(90deg, var(--cyan) 0%, var(--purple) 100%);
+  
+  /* Fontes (Conforme o Design) */
+  --font-title: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-text: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Espaçamentos e Bordas */
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
   
-
-body{
-    min-height: 100vh;
-    background-color: #050505; 
-    font-family: system-ui, -apple-system, sans-serif;
+body {
+  min-height: 100vh;
+  background-color: var(--bg-dark); 
+  color: var(--text-main);
+  font-family: var(--font-text);
+  overflow-x: hidden; /* Evita quebras de layout horizontal no mobile */
 }
 
-#root{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-
-   
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ==========================================
@@ -31,14 +49,14 @@ body{
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh; /* Altura maior para a animação fluir bem */
+  height: 100vh; 
   
-  /* Criando as "estrelas" com gradientes */
+  /* Estrelas agora utilizam as variáveis globais de cor */
   background-image: 
     radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 80px 70px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 150px 160px, #00F0FF, rgba(0,0,0,0)), /* Estrelas ciano */
-    radial-gradient(2px 2px at 90px 240px, #A855F7, rgba(0,0,0,0)), /* Estrelas roxas */
+    radial-gradient(2px 2px at 150px 160px, var(--cyan), rgba(0,0,0,0)), 
+    radial-gradient(2px 2px at 90px 240px, var(--purple), rgba(0,0,0,0)), 
     radial-gradient(2px 2px at 250px 90px, rgba(255,255,255,0.6), rgba(0,0,0,0));
   
   background-repeat: repeat;
@@ -46,9 +64,8 @@ body{
   
   z-index: -1;
   pointer-events: none;
-  opacity: 0.6; /* Controle a intensidade do brilho aqui */
+  opacity: 0.6; 
   
-  /* Animação que faz as estrelas subirem */
   animation: moveSpace 40s linear infinite;
 }
 
@@ -57,6 +74,6 @@ body{
     background-position: 0 0;
   }
   to {
-    background-position: 0 -300px; /* Deve ser o mesmo valor do background-size */
+    background-position: 0 -300px; 
   }
 }

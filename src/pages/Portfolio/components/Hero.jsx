@@ -1,9 +1,9 @@
 import React from "react";
-import "./Hero.css";
+import "./hero.css";
 
-import likedin from "../../assets/linkedin.png"
-import gitHub from "../../assets/gitHub.png"
-import zap from "../../assets/zap.png"
+import likedin from "../../../assets/linkedin.png";
+import gitHub from "../../../assets/gitHub.png";
+import zap from "../../../assets/zap.png";
 
 export function Hero() {
   return (
