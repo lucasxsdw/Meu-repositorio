@@ -1,14 +1,16 @@
 /* ==========================================
-   HEADER / NAVBAR
+   HEADER CONTAINER
    ========================================== */
-
 .header-container {
   position: fixed;
   width: 100%;
+  top: 0;
   padding: 1.25rem 2rem;
-  background: linear-gradient(90deg, #040b17 0%, #000000 40%, #000000 100%);
+  /* Fundo translúcido escuro como na imagem */
+  background: rgba(10, 10, 15, 0.7); 
   z-index: 1000;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .header-content {
@@ -25,27 +27,18 @@
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
+  text-decoration: none;
 }
 
-/* Quadrado com gradiente */
 .logo-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #00F0FF 0%, #A855F7 100%);
-}
-
-/* O símbolo >_ dentro do quadrado */
-.terminal-symbol {
-  color: #060608;
-  font-family: 'JetBrains Mono', monospace, sans-serif;
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: -1px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #00F0FF; /* Azul ciano sólido igual da imagem */
 }
 
 .logo-text {
@@ -57,49 +50,58 @@
 }
 
 /* ==========================================
-   NAV LINKS (MENU DO MEIO)
+   TOGGLE CENTRAL (Seu Negócio / Quem Sou Eu)
    ========================================== */
-.header-nav {
+.header-toggle {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  background: rgba(25, 25, 30, 0.6); /* Cápsula escura no fundo */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  padding: 0.25rem;
 }
 
-.nav-link {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #cbd5e1; /* Cinza claro suave */
+.toggle-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-.nav-link:hover {
+.toggle-btn:hover {
   color: #ffffff;
 }
 
-/* ==========================================
-   BOTÃO ENTRAR EM CONTATO
-   ========================================== */
-.btn-contact {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.625rem 1.25rem;
-  border-radius: 10px; 
-  
-  /* Gradiente horizontal Ciano -> Azul idêntico ao print */
-  background: linear-gradient(90deg, #00F0FF 0%, #3B82F6 100%);
-  
-  color: #000000; /* Texto preto para o máximo contraste */
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* Estado Ativo: O botão clicado recebe o gradiente e a cor de texto escura */
+.toggle-btn.active {
+  color: #000000;
+  background: linear-gradient(90deg, #00F0FF 0%, #A855F7 100%);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
 }
 
-.btn-contact:hover {
+/* ==========================================
+   BOTÃO WHATSAPP (Ação Direita)
+   ========================================== */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px; 
+  background: transparent;
+  color: #00F0FF; 
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #00F0FF;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background: rgba(0, 240, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
   transform: translateY(-1px);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); 
 }

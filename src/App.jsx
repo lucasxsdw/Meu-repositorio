@@ -1,26 +1,25 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import { Header } from "./components/Header/Header";
-import { Hero } from "./components/Hero/Hero";
-import { Sobre } from "./components/Sobre/Sobre";
-import { Projetos } from "./components/Projetos/Projetos"; 
-import "./App.css";
-import { Formacao } from "./components/Formacao/Formacao";
-import { Habilidades } from "./components/Habilidades/Habilidades";
-import { B2bServices } from "./components/B2bServices/B2bServices";
+import { Portfolio } from "./pages/Portfolio/Portfolio";
+import { B2bLanding } from "./pages/B2bLanding/B2bLanding";
+
 
 function App() {
   return (
     <>
-    <div className="bg-stars">  </div>
+      {/* O fundo de estrelas e o Header ficam fixos em todas as telas */}
+      <div className="bg-stars"></div>
       <Header />
-      <Hero />
-      <Sobre />
-      <Projetos />
-      <Formacao />
-      <B2bServices />
-      <Habilidades />
-    
+      
+      {/* As rotas controlam o que aparece no meio da tela */}
+      <Routes>
+        {/* Como a página B2B foi deletada, vamos apontar tudo para o Portfolio por enquanto */}
+        <Route path="/" element={<B2bLanding />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+      </Routes>
     </>
-    
   );
 }
 
