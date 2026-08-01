@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
 export function Header() {
-  // O useLocation nos diz em qual rota estamos agora (ex: '/' ou '/portfolio')
+  // O useLocation  diz em qual rota estamos agora (ex: '/' ou '/portfolio')
   const location = useLocation();
 
   return (

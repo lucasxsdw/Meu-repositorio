@@ -1,0 +1,161 @@
+.solucoes-container {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 2rem;
+  background-color: transparent; 
+}
+
+.solucoes-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Textos Superiores alinhados à esquerda conforme design */
+.badge-outline {
+  display: inline-table;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.section-title-large {
+  font-family: var(--font-title);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.section-subtitle-left {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+
+/* Grid Principal */
+.solucoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Cartões Verticais */
+.solucao-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.solucao-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Cabeçalho do Cartão (Ícone e Número) */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.icon-box.cyan { color: var(--cyan); }
+.icon-box.purple { color: var(--purple); }
+.icon-box.blue { color: #3B82F6; }
+
+.card-number {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+/* Textos do Cartão */
+.solucao-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.solucao-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  flex-grow: 1; /* Empurra a lista de benefícios para o final */
+}
+
+/* Lista de Benefícios */
+.beneficios-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.beneficios-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.beneficios-list svg {
+  width: 16px;
+  height: 16px;
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+
+/* Link Inferior */
+.solucoes-footer-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.solucoes-footer-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--cyan);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: opacity 0.2s ease;
+}
+
+.solucoes-footer-link a:hover {
+  opacity: 0.8;
+}

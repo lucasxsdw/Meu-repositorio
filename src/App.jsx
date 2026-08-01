@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Header } from "./components/Header/Header";
 import { Portfolio } from "./pages/Portfolio/Portfolio";
 import { B2bLanding } from "./pages/B2bLanding/B2bLanding";
+import { Footer } from "./components/Footer/Footer";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route path="/" element={<B2bLanding />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

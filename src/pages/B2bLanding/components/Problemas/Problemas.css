@@ -1,0 +1,119 @@
+.problemas-container {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 2rem;
+  background-color: transparent; /* Mantém a integração com o fundo estrelado */
+}
+
+.problemas-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Tag de Alerta */
+.badge-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  color: var(--cyan);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Textos da Seção */
+.section-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 4rem;
+}
+
+/* O Grid Mágico */
+.problemas-grid {
+  display: grid;
+  /* Cria colunas de no mínimo 300px. Se não couber, empilha sozinho */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+/* Cartões */
+.problema-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: var(--bg-card);
+  border: var(--border-subtle);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.problema-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.icon-wrapper.cyan {
+  color: var(--cyan);
+}
+
+.icon-wrapper.purple {
+  color: var(--purple);
+}
+
+.card-title {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Rodapé da Seção */
+.problemas-footer {
+  text-align: center;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
