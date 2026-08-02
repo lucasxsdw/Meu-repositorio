@@ -25,13 +25,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ==========================================
+   TRAVA GLOBAL DE RESPONSIVIDADE
+   ========================================== */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
   
 body {
   min-height: 100vh;
   background-color: var(--bg-dark); 
   color: var(--text-main);
   font-family: var(--font-text);
-  overflow-x: hidden; /* Evita quebras de layout horizontal no mobile */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Evita que o header cubra o título ao rolar */
 }
 
 #root {
@@ -40,6 +55,8 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* ... mantenha o restante do seu CSS abaixo disso (bg-stars, problemas-container, etc) ... */
 
 /* ==========================================
    EFEITO DE FUNDO: ESPAÇO E ESTRELAS

@@ -167,27 +167,29 @@
    RESPONSIVIDADE (Celulares e Tablets)
    ========================================== */
 @media (max-width: 768px) {
-  /* Move a linha toda para a esquerda */
+  /* Empurra a linha um pouco para a direita para não vazar da tela */
   .timeline-line {
-    left: 0;
+    left: 20px;
     transform: none;
   }
   
-  /* Bolinhas grudam na linha à esquerda */
+  /* Bolinhas acompanham a linha exata e ficam 100% dentro da tela */
   .timeline-dot {
-    left: 0;
-    transform: translateX(-50%); /* Mantém metade na linha, metade fora */
+    left: 20px;
+    transform: translateX(-50%); 
   }
 
-  /* Faz TODOS os cards (pares e ímpares) ocuparem a tela toda na direita */
+  /* Garante que os itens se comportem como blocos empilhados */
   .timeline-item-left,
   .timeline-item-right {
+    width: 100%;
     justify-content: flex-end;
+    margin-bottom: 2rem; /* Dá um respiro entre uma formação e outra */
   }
 
-  /* Cards ocupam quase toda a largura, deixando espaço só pra linha */
+  /* Cards ocupam o espaço restante sem estourar a tela */
   .timeline-card {
-    width: 90%;
-    padding: 1.5rem;
+    width: calc(100% - 60px); /* Pega a tela toda, menos o espaço da linha à esquerda */
+    padding: 1.25rem;
   }
 }
