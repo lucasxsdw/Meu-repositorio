@@ -24,7 +24,7 @@ export function Footer() {
         <div className="footer-links">
           <h4 className="footer-title">NAVEGAÇÃO</h4>
           <a href="/">Seu Negócio</a>
-          <a href="/Portfolio">Quem Sou Eu</a>
+          <a href="/portfolio">Quem Sou Eu</a>
         </div>
 
         <div className="footer-contato">
