@@ -4,7 +4,7 @@ import { minhasHabilidades } from "../../../data/data";
 
 export function Habilidades() {
   return (
-    <section className="habilidades-section">
+    <section className="habilidades-section"  data-aos="fade-up"   >
       {/* CABEÇALHO */}
       <div className="habilidades-header">
         <span className="tech-eyebrow">TECH STACK</span>

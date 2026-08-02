@@ -1,63 +1,58 @@
-import React, { useState } from "react";
-import "./projetos.css";
-// Ajuste o caminho abaixo para onde você salvou seu data.js
-import { meusProjetos } from "../../../data/data";
+import React from 'react';
+import './projetos.css';
 
 export function Projetos() {
-  const [filtroAtivo, setFiltroAtivo] = useState("Todos");
-
-  // Filtros disponíveis
-  const filtros = ["Todos", "Frontend / React", "Sistemas / Backend"];
-
   return (
-    <section className="projetos-section">
-      <div className="projetos-container">
-        {/* CABEÇALHO DA SEÇÃO */}
-        <div className="projetos-header">
-          <span className="eyebrow-text">PORTFÓLIO</span>
-          <h2 className="projetos-title">
-            Meus <span className="text-gradient">Projetos</span>
-          </h2>
-          <p className="projetos-subtitle">
-            Arquitetura, integração e automação. Explore sistemas projetados
-            para resolver problemas reais e otimizar operações em diferentes
-            setores.
-          </p>
-        </div>
-
-        {/* GRID DE PROJETOS */}
-        <div className="projetos-grid">
-          {meusProjetos.map((projeto, index) => (
-            <div className="projeto-card" key={projeto.id}>
-              {/* Imagem do Projeto */}
-              <div className="card-image-wrapper">
-                {/* Badge Destaque apenas no primeiro projeto */}
-                <img
-                  src={projeto.imgUrl}
-                  alt={`Imagem do projeto ${projeto.titulo}`}
-                  className="card-image"
-                />
-              </div>
-
-              {/* Conteúdo do Card */}
-              <div className="card-content">
-                <h3 className="card-title">{projeto.titulo}</h3>
-                <p className="card-description">{projeto.descricao}</p>
-
-                {/* Tags */}
-                <div className="card-tags">
-                  {projeto.tags.map((tag, i) => (
-                    <span key={i} className="tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+    <section className="projetos-container" id="projetos" data-aos="fade-up">
+      <div className="projetos-content">
+        
+        {/* Cabeçalho da Seção */}
+        <h2 className="section-title-large center">
+          Meus <span className="text-gradient">Projetos</span>
+        </h2>
+        <p className="section-subtitle center">
+          Arquitetura, integração e automação. Explore sistemas projetados para resolver problemas reais e otimizar operações em diferentes setores.
+        </p>
+        
+        {/* Grid Compacto de Projetos */}
+        <div className="projetos-compact-grid">
+          
+          {/* Card 1: Saúde */}
+          <div className="projeto-card-compact">
+            <div className="projeto-header">
+              <span className="badge-category saude">Saúde</span>
             </div>
-          ))}
+            <h3 className="projeto-title">SIRUS</h3>
+            <p className="projeto-desc">
+              Sistema Integrado de Regulação e Emergência em Saúde. Plataforma desenvolvida para gestão de emergências, focada em otimizar fluxos e salvar vidas com agilidade.
+            </p>
+          </div>
+
+          {/* Card 2: Inteligência/Polícia */}
+          <div className="projeto-card-compact">
+            <div className="projeto-header">
+              <span className="badge-category seguranca">Inteligência</span>
+            </div>
+            <h3 className="projeto-title">SIOP</h3>
+            <p className="projeto-desc">
+              Sistema de Inteligência de Ocorrências Policiais. Uma ferramenta estratégica criada para transformar dados policiais brutos em inteligência acionável e mapeamento.
+            </p>
+          </div>
+
+          {/* Card 3: Educação */}
+          <div className="projeto-card-compact">
+            <div className="projeto-header">
+              <span className="badge-category educacao">Educação e IA</span>
+            </div>
+            <h3 className="projeto-title">Diário da Inclusão</h3>
+            <p className="projeto-desc">
+              Aplicação de suporte educacional que utiliza análise de sentimentos para garantir inclusão e acompanhamento preciso dos alunos no ambiente escolar.
+            </p>
+          </div>
+
         </div>
 
-        {/* BOTÃO VER MAIS PROJETOS */}
+        {/* Botão Ver Mais Projetos (GitHub) */}
         <div className="projetos-footer">
           <a
             href="https://github.com/lucasxsdw"
@@ -68,8 +63,8 @@ export function Projetos() {
             Conferir todos os projetos no GitHub
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -82,6 +77,7 @@ export function Projetos() {
             </svg>
           </a>
         </div>
+
       </div>
     </section>
   );

@@ -31,7 +31,7 @@ export function Footer() {
           <a href="https://wa.me/5577991996477" target="_blank" rel="noopener noreferrer">
             WhatsApp
           </a>
-          <a href="mailto:contato@gmail.com">contato@gmail.com</a>
+          <a href="mailto:lucasxryangomes123@gmail.com">lucasxryangomes123@gmail.com</a>
           <span className="footer-location">Atendimento remoto, Brasil</span>
         </div>
 

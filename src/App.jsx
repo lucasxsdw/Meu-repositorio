@@ -1,26 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // O CSS mágico das animações
 
 import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
 import { Portfolio } from "./pages/Portfolio/Portfolio";
 import { B2bLanding } from "./pages/B2bLanding/B2bLanding";
-import { Footer } from "./components/Footer/Footer";
-
 
 function App() {
+  // Inicializa o AOS uma única vez quando o site carrega
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Duração da animação em milissegundos (0.8 segundos)
+      once: true,    // Anima apenas uma vez quando rola para baixo
+      offset: 100,   // Dispara quando o elemento está 100px para dentro da tela
+    });
+  }, []);
+
   return (
     <>
-      {/* O fundo de estrelas e o Header ficam fixos em todas as telas */}
       <div className="bg-stars"></div>
       <Header />
-      
-      {/* As rotas controlam o que aparece no meio da tela */}
       <Routes>
-        {/* Como a página B2B foi deletada, vamos apontar tudo para o Portfolio por enquanto */}
         <Route path="/" element={<B2bLanding />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
-
       <Footer />
     </>
   );

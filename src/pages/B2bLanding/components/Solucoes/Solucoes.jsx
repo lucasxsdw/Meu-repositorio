@@ -4,7 +4,7 @@ import './Solucoes.css';
 export function Solucoes() {
   return (
     <section className="solucoes-container">
-      <div className="solucoes-content">
+      <div className="solucoes-content"  data-aos="fade-up" >
         
         {/* Cabeçalho da Seção */}
         <div className="badge-outline">
@@ -130,7 +130,7 @@ export function Solucoes() {
 
         {/* Link Footer */}
         <div className="solucoes-footer-link">
-          <a href="#consultoria">
+          <a href="https://wa.me/5577991996477?text=Olá%20Lucas,%20gostaria%20de%20agendar%20a%20consultoria%20gratuita%20para%20o%20meu%20negócio." target="_blank" rel="noopener noreferrer" >
             Quer saber qual pilar resolve o seu caso? <span>&rarr;</span>
           </a>
         </div>

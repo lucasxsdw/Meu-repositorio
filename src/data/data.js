@@ -82,25 +82,6 @@ export const minhaFormacao = [
   },
 
 
-  {
-    id: 5,
-    periodo: "2025",
-    titulo: "Formação Front-end - HTML, CSS, JavaScript, React e +",
-    instituicao: "Udemy",
-    descricao: "Certificação focada em aprender as melhores práticas de desenvolvimento, conceitos-chave e técnicas avançadas que são essenciais para criar interfaces de usuário eficientes e atraentes.",
-    tag: "CERTIFICAÇÃO",
-    lado: "direita"
-  },
-
-   {
-    id: 6,
-    periodo: "2026",
-    titulo: "Extração e Consumo de APIs com Python",
-    instituicao: "Udemy",
-    descricao: "Especialização avançada em integração de sistemas e consumo de APIs RESTful com Python. Domínio em otimização de performance via requisições assíncronas e paralelismo, além de gerenciamento estrutural de Rate Limits, Throttling e autenticação segura (SSL).",    
-    tag: "CERTIFICAÇÃO",
-    lado: "esquerda"
-  },
 
   
 

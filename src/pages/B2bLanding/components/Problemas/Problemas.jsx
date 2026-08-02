@@ -4,7 +4,7 @@ import './Problemas.css';
 export function Problemas() {
   return (
     <section className="problemas-container">
-      <div className="problemas-content">
+      <div className="problemas-content"  data-aos="fade-up"   >
         
         {/* Tag Superior */}
         <div className="badge-alert">

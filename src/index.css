@@ -77,3 +77,24 @@ body {
     background-position: 0 -300px; 
   }
 }
+
+/* Adicione no topo do arquivo */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Evita que o header cubra o título ao rolar */
+}
+
+/* Redução dos paddings globais para comprimir a visão */
+.problemas-container,
+.solucoes-container,
+.casos-container,
+.projetos-container {
+  padding: 4rem 2rem !important; /* Reduzimos de 6rem/8rem para 4rem */
+}
+
+/* Ajuste nos títulos para não ocuparem tanto espaço vertical */
+.section-title-large {
+  font-size: clamp(2rem, 3.5vw, 2.8rem) !important;
+  margin-bottom: 1rem !important;
+}
+

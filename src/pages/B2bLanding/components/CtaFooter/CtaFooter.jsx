@@ -4,7 +4,7 @@ import './CtaFooter.css';
 export function CtaFooter() {
   return (
     <section className="cta-footer-container">
-      <div className="cta-content">
+      <div className="cta-content"  data-aos="fade-up"   >
         <div className="badge-alert mb-4">
           <span className="dot-cyan"></span>
           Consultoria gratuita, vagas limitadas
@@ -21,18 +21,15 @@ export function CtaFooter() {
         </p>
 
         <div className="action-group justify-center mt-4">
-          <a href="#consultoria" className="btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            Agendar consultoria gratuita
+           <a 
+            href="https://wa.me/5577991996477?text=Olá%20Lucas,%20gostaria%20de%20agendar%20a%20consultoria%20gratuita%20para%20o%20meu%20negócio." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-primary"
+          >
+            Agendar consultoria gratuita <span>&rarr;</span>
           </a>
-          <a href="https://wa.me/5577991996477" target="_blank" rel="noopener noreferrer" className="btn-outline">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-            </svg>
-            Falar no WhatsApp
-          </a>
+          
         </div>
 
         <div className="cta-benefits">

@@ -7,7 +7,7 @@ import iconeDesign from "../../../assets/icon-star.svg";
 
 export function Sobre() {
   return (
-    <section className="container-sobre">
+    <section className="container-sobre"  data-aos="fade-up"   >
       <div className="sobre-content-wrapper">
         {/* CABEÇALHO E TEXTO NO TOPO */}
         <div className="sobre-header">

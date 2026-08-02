@@ -4,7 +4,7 @@ import './CasosUso.css';
 export function CasosUso() {
   return (
     <section className="casos-container">
-      <div className="casos-content">
+      <div className="casos-content"  data-aos="fade-up"   >
         
         <div className="badge-outline">
           Na Prática

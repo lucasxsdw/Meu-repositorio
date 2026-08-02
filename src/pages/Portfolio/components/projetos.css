@@ -1,280 +1,142 @@
-/* ==========================================
-   SEÇÃO DE PROJETOS PRINCIPAL
-   ========================================== */
-.projetos-section {
-  width: 100%;
-  padding: 6rem 1.5rem;
-  background-color: transparent; /* Fundo bem escuro como no print */
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-}
-
 .projetos-container {
-  max-width: 1152px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ==========================================
-   CABEÇALHO
-   ========================================== */
-.projetos-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  max-width: 600px;
-}
-
-.eyebrow-text {
-  color: #00F0FF;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.projetos-title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-.text-gradient {
-  background: linear-gradient(135deg, #00F0FF 0%, #A855F7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.projetos-subtitle {
-  color: #94a3b8;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ==========================================
-   FILTROS
-   ========================================== */
-.projetos-filtros {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 4rem;
-  flex-wrap: wrap;
   justify-content: center;
+  background-color: transparent;
+  width: 100%;
 }
 
-.filtro-btn {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #a1a1aa;
-  padding: 0.6rem 1.5rem;
-  border-radius: 50px; /* Botões em formato pílula */
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.projetos-content {
+  width: 100%;
+  max-width: 1100px;
 }
 
-.filtro-btn:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #ffffff;
-}
-
-.filtro-btn.ativo {
-  background-color: #00F0FF;
-  color: #000000;
-  border-color: #00F0FF;
-  font-weight: 600;
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3); /* Efeito Glow do print */
-}
-
-/* ==========================================
-   GRID E CARDS DE PROJETO
-   ========================================== */
-.projetos-grid {
+.projetos-compact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas exatas */
-  gap: 2rem;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.projeto-card {
-  background: #121214; /* Fundo do card */
+.projeto-card-compact {
+  background: rgba(10, 10, 12, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.projeto-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.card-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 200px; /* Altura fixa para as imagens */
-  background: #1a1a1d;
-}
-
-.card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.badge-destaque {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #00F0FF;
-  color: #000000;
-  padding: 0.3rem 0.8rem;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  z-index: 2;
-}
-
-/* ==========================================
-   CONTEÚDO INTERNO DO CARD
-   ========================================== */
-.card-content {
+  border-radius: var(--radius-md);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  transition: transform 0.2s, border-color 0.2s;
+  backdrop-filter: blur(10px);
 }
 
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.75rem;
+.projeto-card-compact:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 240, 255, 0.3);
 }
 
-.card-description {
-  font-size: 0.9rem;
-  color: #94a3b8;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  flex-grow: 1; /* Empurra os botões e tags pro final */
-}
-
-/* Tags */
-.card-tags {
+.projeto-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tag {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #d1d5db;
-  padding: 0.25rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.7rem;
-  font-weight: 500;
-}
-
-/* ==========================================
-   BOTÕES DE AÇÃO DO CARD (Ver Live / Código)
-   ========================================== */
-.card-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.btn-live, .btn-codigo {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+/* Badges de Categoria */
+.badge-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-category.saude { 
+  background: rgba(59, 130, 246, 0.1); 
+  color: #3B82F6; 
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+.badge-category.seguranca { 
+  background: rgba(168, 85, 247, 0.1); 
+  color: var(--purple); 
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+.badge-category.educacao { 
+  background: rgba(0, 240, 255, 0.1); 
+  color: var(--cyan); 
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.projeto-link {
+  color: var(--text-muted);
+  font-size: 0.85rem;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s;
 }
 
-.btn-live {
-  background-color: #00F0FF;
-  color: #000000;
-  border: 1px solid #00F0FF;
+.projeto-link:hover { 
+  color: var(--cyan); 
 }
 
-.btn-live:hover {
-  background-color: #00c4d1;
+.projeto-title {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
 }
 
-.btn-codigo {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.projeto-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  text-align: left;
 }
 
-.btn-codigo:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.4);
-}
-
-.btn-live.disabled, .btn-codigo.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  text-decoration: line-through;
+/* Nova tag para Comércios Locais (Tom Dourado/Laranja) */
+.badge-category.comercio { 
+  background: rgba(234, 179, 8, 0.1); 
+  color: #EAB308; 
+  border: 1px solid rgba(234, 179, 8, 0.2);
 }
 
 /* ==========================================
-   BOTÃO FOOTER (VER MAIS NO GITHUB)
+   FOOTER DOS PROJETOS (BOTÃO GITHUB)
    ========================================== */
 .projetos-footer {
-  margin-top: 4rem;
   display: flex;
   justify-content: center;
+  margin-top: 3.5rem;
 }
 
 .btn-ver-mais {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  border-bottom: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .btn-ver-mais:hover {
-  color: #00F0FF;
-  border-bottom: 1px solid #00F0FF;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
-/* ==========================================
-   RESPONSIVIDADE
-   ========================================== */
-@media (max-width: 1024px) {
-  .projetos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.btn-ver-mais svg {
+  color: var(--text-main);
 }
 
-@media (max-width: 768px) {
-  .projetos-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .projetos-title {
-    font-size: 2.5rem;
-  }
+/* Garante que qualquer texto com a classe .center fique perfeitamente no meio */
+.center {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
