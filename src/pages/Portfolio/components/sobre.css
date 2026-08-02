@@ -141,18 +141,20 @@
    RESPONSIVIDADE (TABLETS E CELULARES)
    ========================================== */
 @media (max-width: 768px) {
-  /* Substitua '.skills-grid' pelo nome real da div que envolve os cartões */
-  .skills-grid {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os cartões desçam para a próxima linha */
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
+  .container-sobre {
+    padding: 4rem 1rem;
   }
 
-  /* Ajusta o tamanho dos cartõezinhos para caberem lado a lado */
-  .skill-card {
-    width: calc(50% - 1rem); /* Ficam 2 por linha no celular */
-    min-width: 120px;
+  .sobre-title {
+    font-size: 2rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr; /* Empilha os cartões no celular */
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
   }
 }

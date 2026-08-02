@@ -41,7 +41,6 @@
   color: var(--text-main);
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
-  color: yellow; /* Cor amarela para destaque */
 }
 
 .text-gradient {
