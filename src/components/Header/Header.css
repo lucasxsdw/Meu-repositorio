@@ -68,7 +68,6 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 50px;
   padding: 0.25rem;
-
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -135,6 +134,7 @@
     display: block;
   }
 
+  /* Restaura o menu dropdown (hambúrguer) original */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -145,8 +145,6 @@
     padding: 2rem;
     gap: 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    
-    /* Efeito de abertura suave do menu */
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path 0.3s ease-in-out;
   }
@@ -155,21 +153,18 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
- /* Ajusta a cápsula e o botão para ocuparem a tela toda no mobile */
+  /* Ajusta os botões para ocuparem 100% da largura dentro do menu mobile */
   .header-toggle {
     position: static;
-    transform: none; /* Isso cancela o empurrão para a esquerda */
     width: 100%;
+    transform: none;
     justify-content: space-between;
-    padding: 0.35rem; /* Um respiro um pouco maior nas bordas */
   }
 
   .toggle-btn {
     text-align: center;
     flex: 1;
-    white-space: nowrap; /* Impede que o texto quebre em duas linhas */
-    font-size: 0.8rem; /* Ajuste sutil para caber perfeito em telas pequenas */
-    padding: 0.5rem 0.5rem;
+    white-space: nowrap !important;
   }
 
   .btn-whatsapp {

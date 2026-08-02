@@ -4,7 +4,7 @@ import { minhaFormacao } from "../../../data/data";
 
 export function Formacao() {
   return (
-    <section className="formacao-section"  data-aos="fade-up"   >
+    <section className="formacao-section" data-aos="fade-up">
       {/* CABEÇALHO */}
       <div className="formacao-header">
         <h2 className="formacao-title">

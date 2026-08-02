@@ -4,7 +4,7 @@
 .formacao-section {
   width: 100%;
   padding: 6rem 1.5rem;
-  background-color: transparent; /* Mantém as estrelas visíveis! */
+  background-color: transparent;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
 }
@@ -48,7 +48,7 @@
   bottom: 0;
   width: 2px;
   background: linear-gradient(to bottom, transparent, rgba(0, 240, 255, 0.3) 10%, rgba(168, 85, 247, 0.3) 90%, transparent);
-  transform: translateX(-50%); /* Centraliza a linha perfeitamente */
+  transform: translateX(-50%);
 }
 
 /* ==========================================
@@ -58,22 +58,19 @@
   display: flex;
   width: 100%;
   position: relative;
-  align-items: center; /* Alinha o card com a bolinha no centro */
+  align-items: center;
 }
 
-/* Se for par, empurra o conteúdo pro começo (esquerda) */
 .timeline-item-left {
   justify-content: flex-start;
 }
 
-/* Se for ímpar, empurra o conteúdo pro final (direita) */
 .timeline-item-right {
   justify-content: flex-end;
 }
 
-/* O Card em si */
 .timeline-card {
-  width: 45%; /* Ocupa menos da metade para não encostar na linha */
+  width: 45%;
   background: #121214;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
@@ -106,7 +103,7 @@
 }
 
 .timeline-item-right .timeline-dot {
-  border-color: #A855F7; /* Roxinho para os itens da direita */
+  border-color: #A855F7;
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
 }
 
@@ -130,7 +127,7 @@
 }
 
 .timeline-item-right .card-periodo {
-  color: #A855F7; /* Combina com a bolinha roxa */
+  color: #A855F7;
 }
 
 .card-titulo {
@@ -167,29 +164,27 @@
    RESPONSIVIDADE (Celulares e Tablets)
    ========================================== */
 @media (max-width: 768px) {
-  /* Empurra a linha um pouco para a direita para não vazar da tela */
   .timeline-line {
     left: 20px;
     transform: none;
   }
   
-  /* Bolinhas acompanham a linha exata e ficam 100% dentro da tela */
   .timeline-dot {
     left: 20px;
     transform: translateX(-50%); 
   }
 
-  /* Garante que os itens se comportem como blocos empilhados */
   .timeline-item-left,
   .timeline-item-right {
     width: 100%;
-    justify-content: flex-end;
-    margin-bottom: 2rem; /* Dá um respiro entre uma formação e outra */
+    justify-content: flex-start;
+    padding-left: 60px; /* Afasta o card da bolinha */
+    padding-right: 15px; /* Mantém limite na direita */
+    margin-bottom: 2rem; 
   }
 
-  /* Cards ocupam o espaço restante sem estourar a tela */
   .timeline-card {
-    width: calc(100% - 60px); /* Pega a tela toda, menos o espaço da linha à esquerda */
+    width: 100%;
     padding: 1.25rem;
   }
 }
