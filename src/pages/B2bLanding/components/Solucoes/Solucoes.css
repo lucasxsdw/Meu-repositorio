@@ -159,3 +159,35 @@
 .solucoes-footer-link a:hover {
   opacity: 0.8;
 }
+
+/* ==========================================
+   RESPONSIVIDADE MOBILE (Adicionado)
+   ========================================== */
+@media (max-width: 768px) {
+  .solucoes-container {
+    padding: 4rem 1rem;
+  }
+
+  .section-title-large {
+    font-size: 2rem;
+  }
+
+  .section-subtitle-left {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .solucoes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .solucao-card {
+    padding: 1.5rem; /* Menos margem interna para sobrar espaço para o texto */
+  }
+
+  .solucoes-footer-link a {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
