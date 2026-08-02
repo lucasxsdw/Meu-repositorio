@@ -49,7 +49,6 @@
 /* O Grid Mágico */
 .problemas-grid {
   display: grid;
-  /* Cria colunas de no mínimo 300px. Se não couber, empilha sozinho */
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
   width: 100%;
@@ -116,4 +115,36 @@
 
 .font-bold {
   font-weight: 700;
+}
+
+/* ==========================================
+   RESPONSIVIDADE MOBILE (Adicionado)
+   ========================================== */
+@media (max-width: 768px) {
+  .problemas-container {
+    padding: 4rem 1rem; /* Reduz margens externas */
+  }
+
+  .section-title {
+    font-size: 2rem; /* Ajuste seguro para telas estreitas */
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .problemas-grid {
+    grid-template-columns: 1fr; /* Força 1 coluna exata, sem minmax de 350px */
+    gap: 1rem;
+  }
+
+  .problema-card {
+    padding: 1.25rem; /* Reduz padding interno do cartão */
+    gap: 1rem;
+  }
+
+  .problemas-footer {
+    font-size: 1rem; /* Ajusta texto do rodapé */
+  }
 }
