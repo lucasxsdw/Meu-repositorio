@@ -4,7 +4,7 @@ import { Problemas } from './components/Problemas/Problemas';
 import { Solucoes } from './components/Solucoes/Solucoes';
 import { CasosUso } from './components/CasosUso/CasosUso';
 import { CtaFooter } from './components/CtaFooter/CtaFooter';
-import './b2bLanding.css';
+import './B2bLanding.css';
 
 export function B2bLanding() {
   return (
